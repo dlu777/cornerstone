@@ -1,0 +1,11 @@
+{
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {}
+  },
+  "normalStoreUrl": "https://benchprep-developer.mybigcommerce.com",
+  "port": "3003",
+  "packageManager": "npm"
+}
