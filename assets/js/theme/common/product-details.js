@@ -445,7 +445,8 @@ export default class ProductDetails extends ProductDetailsBase {
                 return showAlertModal(tmp.textContent || tmp.innerText);
             }
 
-            this.loginBp()
+            const cartId = response.data.cart_id || this.context.cartId;
+            this.loginBp(cartId)
 
             // Open preview modal and update content
             if (this.previewModal) {
@@ -596,8 +597,8 @@ export default class ProductDetails extends ProductDetailsBase {
         }));
     }
 
-    loginBp() {
-        const url = `http://wmx.benchprep.localhost/login?big_commerce_login=true&cartId=${this.context.cartId}`
+    loginBp(cartId) {
+        const url = `http://wmx.benchprep.localhost/login?big_commerce_login=true&cartId=${cartId}`
         console.log('logging in', url)
         this.redirectTo(url);
     }
